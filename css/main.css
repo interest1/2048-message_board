@@ -1,5 +1,5 @@
 *{
-    /*margin: 0;*/
+    margin: 0;
     padding: 0;
 }
 li{
@@ -12,15 +12,15 @@ header{
     width: 100%;
     text-align: center;
 }
-header h1{
+header h2{
     font-family: Arial;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: bold;
-    margin: 10px auto;
+    margin: 5px auto;
 }
 header #btn{
     display: block;
-    margin: 20px auto 10px auto;
+    margin: 0 auto;
     width: 100px;
     padding: 5px 5px;
     background-color: #8f7a66;
@@ -34,7 +34,7 @@ header #btn:hover{
     background-color: #9f8b77;
 }
 header button{
-    margin: 10px auto 10px auto;
+    margin: 5px auto;
     font-size: 20px;
 }
 header p{
@@ -47,7 +47,7 @@ header p{
     width: 460px;
     height: 460px;
     padding: 10px;
-    margin: 10px auto;
+    margin: 5px auto;
     background-color: #bbada0;
     border-radius: 10px;
     position: relative;
