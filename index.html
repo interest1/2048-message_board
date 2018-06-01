@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>2048</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/support.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/show.js"></script>
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?699cc7cae1ac71d78fac96d075792a03";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+<body>
+<header>
+    <h1>2048(浙大校歌版)</h1>
+    <a href="javascript:newgame()" id="btn">重新游戏</a>
+    <p>分数：<span id="score">0</span></p>
+    <button id="msg" onclick="location.href='list.php'">给我们留言吧</button>
+</header>
+
+<div id="grids">
+    <div class="grid" id="grid00"></div>
+    <div class="grid" id="grid01"></div>
+    <div class="grid" id="grid02"></div>
+    <div class="grid" id="grid03"></div>
+    <div class="grid" id="grid10"></div>
+    <div class="grid" id="grid11"></div>
+    <div class="grid" id="grid12"></div>
+    <div class="grid" id="grid13"></div>
+    <div class="grid" id="grid20"></div>
+    <div class="grid" id="grid21"></div>
+    <div class="grid" id="grid22"></div>
+    <div class="grid" id="grid23"></div>
+    <div class="grid" id="grid30"></div>
+    <div class="grid" id="grid31"></div>
+    <div class="grid" id="grid32"></div>
+    <div class="grid" id="grid33"></div>
+</div>
+
+<footer>
+    浙ICP备17049184号-4
+</footer>
+
+<script>
+    var key=document.getElementById('key');
+    key.onclick=clk;
+    function clk () {
+        var detail=document.getElementById('detail');
+        var display=detail.style.display;
+        if(display!='none'){
+            detail.style.display='none';
+            key.innerText='查看规则'
+        }else{
+            detail.style.display='block';
+            key.innerText='收起规则'
+        }
+    }
+</script>
+</body>
+</html>
+
+<!--<script>-->
+<!--var _hmt = _hmt || [];-->
+<!--(function() {-->
+<!--var hm = document.createElement("script");-->
+<!--hm.src = "https://hm.baidu.com/hm.js?699cc7cae1ac71d78fac96d075792a03";-->
+<!--var s = document.getElementsByTagName("script")[0];-->
+<!--s.parentNode.insertBefore(hm, s);-->
+<!--})();-->
+<!--</script>-->
