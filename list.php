@@ -14,8 +14,10 @@
 <body>
 <div class="main">
     <form id="form" action="add.php" method="post" name="myform" onsubmit="return check();">
-        用户：<input type="text" name="user"><br><br>
-        内容：<textarea name="content"></textarea><br>
+        <span>用户：</span>
+        <input type="text" name="user"><br><br>
+        <span class="cont">内容：</span>
+        <textarea name="content"></textarea><br>
         <input class="btn" type="submit" name="submit" value="提交">
         <input class="btn" type="button" onclick="location.href='index.html'" value="回到游戏">
     </form>
