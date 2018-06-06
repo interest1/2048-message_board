@@ -21,11 +21,6 @@ form {
     position: relative;
     font-size: 20px;
 }
-form .cont{
-    display: inline-block;
-    height: 50px;
-    line-height: 50px;
-}
 form input{
     width: 300px;
     margin-top: 10px;
@@ -69,4 +64,8 @@ td {
     background-color:#ECF5FF;
     font-size: 12px;
     text-align: right;
+}
+.space{
+    height: 10px;
+    border:0;
 }

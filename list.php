@@ -16,7 +16,7 @@
     <form id="form" action="add.php" method="post" name="myform" onsubmit="return check();">
         <span>用户：</span>
         <input type="text" name="user"><br><br>
-        <span class="cont">内容：</span>
+        <span>内容：</span>
         <textarea name="content"></textarea><br>
         <input class="btn" type="submit" name="submit" value="提交">
         <input class="btn" type="button" onclick="location.href='index.html'" value="回到游戏">
@@ -30,6 +30,7 @@
             <tr class="user"><td>用户： <?php echo $r['user'];?></td></tr>
             <tr class="content"><td>内容:<?php echo $r['content'];?></td></tr>
             <tr class="date"><td><?php echo $r['lastdate'];?></td></tr>
+            <tr class="space"></tr>
         <?php } ?>
     </table>
 
