@@ -22,7 +22,7 @@
         <input class="btn" type="button" onclick="location.href='index.html'" value="回到游戏">
     </form>
     <br>
-    <table id="table" border="1" align="center" cellpadding="5" cellspacing="1">
+    <table id="table" align="center" cellpadding="5" cellspacing="1">
         <?php
         $sql="select * from message order by id desc";
         $query=mysqli_query($conn,$sql);

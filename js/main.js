@@ -51,17 +51,20 @@ function preForMb() {
         sps=20;
     }
     $('#form').css('font-size','.2rem');
-    $('#table').css('font-size','.2rem');
-    $('#table').css('width','2rem');
+    var table=$('#table');
+    table.css('font-size','.2rem');
+    table.css('width','2rem');
 
-    $('#grids').css('width',gridsW-2*sps);
-    $('#grids').css('height',gridsW-2*sps);
-    $('#grids').css('padding',sps);
-    $('#grids').css('border-radius',0.02*gridsW);
+    var grids=$('#grids');
+    grids.css('width',gridsW-2*sps);
+    grids.css('height',gridsW-2*sps);
+    grids.css('padding',sps);
+    grids.css('border-radius',0.02*gridsW);
 
-    $('.grid').css('width',gridW);
-    $('.grid').css('height',gridW);
-    $('.grid').css('border-radius',0.1*gridW);
+    var grid=$('.grid');
+    grid.css('width',gridW);
+    grid.css('height',gridW);
+    grid.css('border-radius',0.1*gridW);
 }
 
 function init() {
