@@ -11,6 +11,10 @@ var x=0;
 var y=0;
 var ex=0;
 var ey=0;
+docW=window.screen.availWidth;
+gridsW=0.92*docW;
+gridW=0.18*docW;
+sps=0.04*docW;
 
 $(document).ready(function () {
     preForMb();
