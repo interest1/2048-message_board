@@ -30,7 +30,6 @@ function preForMb() {
     var table=$('#table'),
         grids=$('#grids'),
         grid=$('.grid');
-    alert('mobile');
     $('#form').css('font-size','.2rem');
     table.css('font-size','.2rem');
     table.css('width','2rem');
