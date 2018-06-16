@@ -32,18 +32,19 @@ function newNum(n) {
     var rx=parseInt(Math.floor(Math.random()*4));
     var ry=parseInt(Math.floor(Math.random()*4));
     while(true){
-        if(board[rx][ry]==0){
+        if(board[rx][ry]===0){
             break;
         }else{
             rx=parseInt(Math.floor(Math.random()*4));
             ry=parseInt(Math.floor(Math.random()*4));
         }
     }
-    if(n){
-        var rNum=ar[0];
-    }else{
-        var rNum=Math.random() <0.5?ar[0]:ar[1];
-    }
+    n?rNum=ar[0]:rNum=Math.random() <0.5?ar[0]:ar[1];
+    // if(n){
+    //     var rNum=ar[0];
+    // }else{
+    //     var rNum=Math.random() <0.5?ar[0]:ar[1];
+    // }
     board[rx][ry]=rNum;
     show(rx,ry,rNum);
     return true;
