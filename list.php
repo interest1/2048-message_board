@@ -8,7 +8,6 @@
           content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <link href="css/bbs.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/main.js"></script>
     <script src="js/bbs.js"></script>
 </head>
 <body>

@@ -5,8 +5,8 @@ $(document).ready(function () {
 function mob() {
     var table=$('#table');
     alert('mobile');
-    table.css('font-size','.2rem');
-    table.css('width','2rem');
+    table.css('font-size','20px');
+    table.css('width','200px');
 
 function check() {
     if(myform.user.value=="")
