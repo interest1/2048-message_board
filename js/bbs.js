@@ -1,3 +1,14 @@
+$(document).ready(function () {
+    mob();
+});
+
+function mob() {
+    var table=$('#table');
+    alert('mobile');
+    $('#form').css('font-size','.2rem');
+    table.css('font-size','.2rem');
+    table.css('width','2rem');
+
 function check() {
     if(myform.user.value=="")
     {
