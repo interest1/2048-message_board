@@ -21,6 +21,29 @@ $(document).ready(function () {
     newgame();
 });
 
+function preForMb() {
+    if(docW>500){
+        gridsW=500;
+        gridW=100;
+        sps=20;
+    }
+    var table=$('#table'),
+        grids=$('#grids'),
+        grid=$('.grid');
+    $('#form').css('font-size','.2rem');
+    table.css('font-size','.2rem');
+    table.css('width','2rem');
+
+    grids.css('width',gridsW-2*sps);
+    grids.css('height',gridsW-2*sps);
+    grids.css('padding',sps);
+    grids.css('border-radius',0.02*gridsW);
+
+    grid.css('width',gridW);
+    grid.css('height',gridW);
+    grid.css('border-radius',0.1*gridW);
+}
+
 function newgame() {
     init();
     newNum(1);
@@ -49,28 +72,6 @@ function newNum(n) {
     show(rx,ry,rNum);
     return true;
 }
-function preForMb() {
-    if(docW>500){
-        gridsW=500;
-        gridW=100;
-        sps=20;
-    }
-    var table=$('#table'),
-        grids=$('#grids'),
-        grid=$('.grid');
-    $('#form').css('font-size','.2rem');
-    table.css('font-size','.2rem');
-    table.css('width','2rem');
-
-    grids.css('width',gridsW-2*sps);
-    grids.css('height',gridsW-2*sps);
-    grids.css('padding',sps);
-    grids.css('border-radius',0.02*gridsW);
-
-    grid.css('width',gridW);
-    grid.css('height',gridW);
-    grid.css('border-radius',0.1*gridW);
-}
 
 function init() {
     for(var i=0;i<4;i++){
@@ -81,10 +82,10 @@ function init() {
         }
     }
 
-    for(var i=0;i<4;i++){
+    for(i=0;i<4;i++){
         board[i]=[];
         hasTouched[i]=[];
-        for(var j=0;j<4;j++){
+        for(j=0;j<4;j++){
             board[i][j]=0;
             hasTouched[i][j]=false;
         }

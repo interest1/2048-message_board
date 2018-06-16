@@ -40,7 +40,7 @@ textarea {
 }
 
 /*留言表格呈现*/
-table{
+#table{
     width:800px;
 }
 td {
@@ -49,12 +49,6 @@ td {
     font-size: 20px;
     font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
 }
-/*.user td{*/
-    /*border-bottom: 1px;*/
-/*}*/
-/*.content td{*/
-    /*border-bottom: 1px;*/
-/*}*/
 
 .user{
     background-color: #d3f8ff;

@@ -8,8 +8,8 @@
           content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <link href="css/bbs.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/bbs.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/bbs.js"></script>
 </head>
 <body>
 <div class="main">
@@ -22,6 +22,7 @@
         <input class="btn" type="button" onclick="location.href='index.html'" value="回到游戏">
     </form>
     <br>
+
     <table id="table" align="center" cellpadding="5" cellspacing="1">
         <?php
         $sql="select * from message order by id desc";
