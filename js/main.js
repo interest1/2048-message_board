@@ -54,18 +54,21 @@ function preForMb() {
         gridW=100;
         sps=20;
     }
+    var table=$('#table'),
+        grids=$('#grids'),
+        grid=$('.grid');
     $('#form').css('font-size','.2rem');
-    $('#table').css('font-size','.2rem');
-    $('#table').css('width','2rem');
+    table.css('font-size','.2rem');
+    table.css('width','2rem');
 
-    $('#grids').css('width',gridsW-2*sps);
-    $('#grids').css('height',gridsW-2*sps);
-    $('#grids').css('padding',sps);
-    $('#grids').css('border-radius',0.02*gridsW);
+    grids.css('width',gridsW-2*sps);
+    grids.css('height',gridsW-2*sps);
+    grids.css('padding',sps);
+    grids.css('border-radius',0.02*gridsW);
 
-    $('.grid').css('width',gridW);
-    $('.grid').css('height',gridW);
-    $('.grid').css('border-radius',0.1*gridW);
+    grid.css('width',gridW);
+    grid.css('height',gridW);
+    grid.css('border-radius',0.1*gridW);
 }
 
 function init() {
@@ -90,7 +93,8 @@ function init() {
 }
 
 function update() {
-    $('.num').remove();
+    var num=$('.num');
+    num.remove();
     for(var i=0;i<4;i++) {
         for (var j = 0; j < 4; j++) {
             var str='#num' + i + '-' + j ;
@@ -115,9 +119,9 @@ function update() {
             hasTouched[i][j]=false;
         }
     }
-    $('.num').css('line-height',gridW/3+'px');
-    $('.num').css('font-size',0.2*gridW+'px');
-    $('.num').css('padding','auto -2px');
+    num.css('line-height',gridW/3+'px');
+    num.css('font-size',0.2*gridW+'px');
+    num.css('padding','auto -2px');
 }
 
 $(document).keydown(function (e) {
@@ -198,8 +202,8 @@ document.addEventListener('touchend',function (ev) {
             };
         }
     }
-})
-var flag=0
+});
+var flag=0;
 function isOver() {
     if(nosps(board)&&nomove(board)){
         alert('Game Over');
