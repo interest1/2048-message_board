@@ -1,6 +1,6 @@
-var board= new Array();
+var board= [];
 var score=0;
-var hasTouched=new Array();
+var hasTouched=[];
 var ar=['大不自多'+'<br>'+'海纳江河','惟学无际'+'<br>'+'际于天地','形上谓道兮'+'<br>'+'形下谓器',
     '礼主别异兮'+'<br>'+'乐主和同','知其不二兮'+'<br>'+'尔听斯聪','国有成均'+'<br>'+'在浙之滨',
     '昔言求是'+'<br>'+'实启尔求真','习坎示教'+'<br>'+'始见经纶','无曰已是'+'<br>'+'无曰遂真',
@@ -82,8 +82,8 @@ function init() {
     }
 
     for(var i=0;i<4;i++){
-        board[i]=new Array();
-        hasTouched[i]=new Array();
+        board[i]=[];
+        hasTouched[i]=[];
         for(var j=0;j<4;j++){
             board[i][j]=0;
             hasTouched[i][j]=false;
@@ -102,7 +102,7 @@ function update() {
             $('#grids').append('<div class="num" id="num' + i + '-' + j + '"><p></p></div>');
             var t=$('#num'+i+'-'+j);
             var n=$('#num' + i + '-' + j+'>p');
-            if (board[i][j] == 0) {
+            if (board[i][j] === 0) {
                 t.css('width', '0px');
                 t.css('height', '0px');
                 t.css('top', getTop(i, j) + gridW/2);
@@ -132,42 +132,42 @@ $(document).keydown(function (e) {
             if(left()){
                 setTimeout('newNum()',210);
                 setTimeout('isOver()',300);
-            };
+            }
             break;
         case 38:
             e.preventDefault();
             if(up()){
                 setTimeout('newNum()',210);
                 setTimeout('isOver()',300);
-            };
+            }
             break;
         case 39:
             e.preventDefault();
             if(right()){
                 setTimeout('newNum()',210);
                 setTimeout('isOver()',300);
-            };
+            }
             break;
         case 40:
             e.preventDefault();
             if(down()){
                 setTimeout('newNum()',210);
                 setTimeout('isOver()',300);
-            };
+            }
             break;
         default:
             break;
     }
-})
+});
 
 document.addEventListener('touchstart',function (ev) {
     x=ev.touches[0].pageX;
     y=ev.touches[0].pageY;
-})
+});
 //bug的解决
 document.addEventListener('touchmove',function (ev) {
     ev.preventDefault();
-})
+});
 document.addEventListener('touchend',function (ev) {
     ex=ev.changedTouches[0].pageX;
     ey=ev.changedTouches[0].pageY;
@@ -183,24 +183,24 @@ document.addEventListener('touchend',function (ev) {
             if(right()){
                 setTimeout('newNum()',210);
                 setTimeout('isOver()',300);
-            };
+            }
         }else{
             if(left()){
                 setTimeout('newNum()',210);
                 setTimeout('isOver()',300);
-            };
+            }
         }
     }else{
         if(dy>0){
             if(down()){
                 setTimeout('newNum()',210);
                 setTimeout('isOver()',300);
-            };
+            }
         }else{
             if(up()){
                 setTimeout('newNum()',210);
                 setTimeout('isOver()',300);
-            };
+            }
         }
     }
 });
@@ -211,7 +211,7 @@ function isOver() {
     }
     for(var i=0;i<4;i++){
         for(var j=0;j<4;j++){
-            if(flag==0&&board[i][j]==ar[11]){
+            if(flag===0&&board[i][j]===ar[11]){
                 alert('到第12句了，继续刷分吧!')
                 flag=1
             }
@@ -231,14 +231,14 @@ function left() {
     }
     for(var i=0;i<4;i++){
         for(var j=1;j<4;j++){
-            if(board[i][j]!=0){
+            if(board[i][j]!==0){
                 for(var k=0;k<j;k++){
-                    if(board[i][k]==0&&emptyX(i,k,j,board)){
+                    if(board[i][k]===0&&emptyX(i,k,j,board)){
                         showMove(i,j,i,k);
                         board[i][k]=board[i][j];
                         board[i][j]=0;
                         //移动并合并的判断
-                    }else if(board[i][k]==board[i][j]&&emptyX(i,k,j,board)&&!hasTouched[i][k]){
+                    }else if(board[i][k]===board[i][j]&&emptyX(i,k,j,board)&&!hasTouched[i][k]){
                         showMove(i,j,i,k);
                         board[i][k]=ar[ar.indexOf(board[i][j])+1];
                         board[i][j]=0;
@@ -260,14 +260,13 @@ function right() {
     }
     for(var i=0;i<4;i++){
         for(var j=2;j>=0;j--){
-            if(board[i][j]!=0){
+            if(board[i][j]!==0){
                 for(var k=3;k>j;k--){
-                    if(board[i][k]==0&&emptyX(i,j,k,board)){
+                    if(board[i][k]===0&&emptyX(i,j,k,board)){
                         showMove(i,j,i,k);
                         board[i][k]=board[i][j];
                         board[i][j]=0;
-                        continue;
-                    }else if(board[i][k]==board[i][j]&&emptyX(i,j,k,board)&&!hasTouched[i][k]){
+                    }else if(board[i][k]===board[i][j]&&emptyX(i,j,k,board)&&!hasTouched[i][k]){
                         showMove(i,j,i,k);
                         board[i][k]=ar[ar.indexOf(board[i][j])+1];
                         board[i][j]=0;
@@ -287,14 +286,13 @@ function up() {
     }
     for(var j=0;j<4;j++){
         for(var i=1;i<4;i++){
-            if(board[i][j]!=0){
+            if(board[i][j]!==0){
                 for(var k=0;k<i;k++){
-                    if(board[k][j]==0&&emptyY(j,k,i,board)){
+                    if(board[k][j]===0&&emptyY(j,k,i,board)){
                         showMove(i,j,k,j);
                         board[k][j]=board[i][j];
                         board[i][j]=0;
-                        continue;
-                    }else if(board[k][j]==board[i][j]&&emptyY(j,k,i,board)&&!hasTouched[k][j]){
+                    }else if(board[k][j]===board[i][j]&&emptyY(j,k,i,board)&&!hasTouched[k][j]){
                         showMove(i,j,k,j);
                         board[k][j]=ar[ar.indexOf(board[i][j])+1];
                         board[i][j]=0;
@@ -314,14 +312,13 @@ function down() {
     }
     for(var j=0;j<4;j++){
         for(var i=2;i>=0;i--){
-            if(board[i][j]!=0){
+            if(board[i][j]!==0){
                 for(var k=3;k>i;k--){
-                    if(board[k][j]==0&&emptyY(j,i,k,board)){
+                    if(board[k][j]===0&&emptyY(j,i,k,board)){
                         showMove(i,j,k,j);
                         board[k][j]=board[i][j];
                         board[i][j]=0;
-                        continue;
-                    }else if(board[k][j]==board[i][j]&&emptyY(j,i,k,board)&&!hasTouched[k][j]){
+                    }else if(board[k][j]===board[i][j]&&emptyY(j,i,k,board)&&!hasTouched[k][j]){
                         showMove(i,j,k,j);
                         board[k][j]=ar[ar.indexOf(board[i][j])+1];
                         board[i][j]=0;
