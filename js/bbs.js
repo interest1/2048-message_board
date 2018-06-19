@@ -1,13 +1,15 @@
+var docW=window.screen.availWidth;
 $(document).ready(function () {
     mob();
 });
-
 function mob() {
-    var table=$('#table');
-    alert('mobile');
-    table.css('font-size','20px');
-    table.css('width','200px');
+    var table=document.getElementById('table');
+    if(docW<500){
+        table.style.width='200px';
+        console.log('a');
+    }
 
+}
 function check() {
     if(myform.user.value=="")
     {
@@ -28,7 +30,8 @@ function check() {
         return false;
     }
 }
+
 function del(id) {
     location.href="del.php?id="+id;
-}
+};
 

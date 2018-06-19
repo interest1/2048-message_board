@@ -9,6 +9,7 @@
     <link href="css/bbs.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bbs.js"></script>
+
 </head>
 <body>
 <div class="main">
@@ -22,7 +23,7 @@
     </form>
     <br>
 
-    <table id="table" align="center" cellpadding="5" cellspacing="1">
+    <table id="table" align="center" cellpadding="5" cellspacing="1" style="width: 800px">
         <?php
         $sql="select * from message order by id desc";
         $query=mysqli_query($conn,$sql);
@@ -35,6 +36,7 @@
     </table>
 
 </div>
+
 
 </body>
 </html>

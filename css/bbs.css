@@ -19,6 +19,7 @@ a:link {
 /*留言撰写区*/
 form {
     margin: 0 auto;
+    width: 300px;
     position: relative;
     font-size: 20px;
 }
@@ -35,14 +36,16 @@ textarea {
 }
 
 .btn{
-    margin: 0 20px;
+    margin: 10px 0;
     width: 120px;
 }
 
 /*留言表格呈现*/
-#table{
-    width:800px;
-}
+/*@media only screen and (min-device-width : 220px) and (max-device-height : 960px){*/
+    /*#table{*/
+        /*width: 200px;*/
+    /*}*/
+/*}*/
 td {
     line-height: 36px;
     border: 1px;
