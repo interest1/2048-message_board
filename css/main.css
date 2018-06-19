@@ -62,6 +62,7 @@ header p{
 
 }
 .num p{
+    vertical-align: middle;
     white-space:nowrap;
 }
 
