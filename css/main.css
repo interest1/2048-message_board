@@ -50,7 +50,7 @@ header p{
     background-color: #ccc0b3;
     position: absolute;
     display: flex;
-    vertical-align: center;
+    justify-content: center;
     align-items: center;
 }
 
