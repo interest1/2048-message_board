@@ -4,9 +4,9 @@
     <?php
     include ("conn.php");
     ?>
-    <meta name="viewport"
-          content="width=device-width,height=device-height,initial-scale=0.4,
-          minimum-scale=0.5,maximum-scale=1.0,user-scalable=yes">
+<!--    <meta name="viewport"-->
+<!--          content="width=device-width,height=device-height,initial-scale=0.4,-->
+<!--          minimum-scale=0.5,maximum-scale=1.0,user-scalable=yes">-->
     <link href="css/bbs.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bbs.js"></script>
