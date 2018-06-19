@@ -13,7 +13,7 @@
 
 </head>
 <body>
-<div class="main">
+<div class="main" id="main">
     <form id="form" action="add.php" method="post" name="myform" onsubmit="return check();">
         <span>用户：</span>
         <input type="text" name="user"><br><br>

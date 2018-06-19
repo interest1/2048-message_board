@@ -4,8 +4,10 @@ $(document).ready(function () {
 });
 function mob() {
     var table=document.getElementById('table');
+    var main=document.getElementById('main');
     if(docW<500){
         table.style.width='100%';
+        main.style.width='100%';
         console.log('a');
     }
 
