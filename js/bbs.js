@@ -6,8 +6,8 @@ function mob() {
     var table=document.getElementById('table');
     var main=document.getElementById('main');
     if(docW<500){
-        table.style.width='100%';
-        main.style.width='100%';
+        table.style.width=0.9*docW +'px';
+        main.style.width=0.9*docW +'px';
         console.log('a');
     }
 
