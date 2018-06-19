@@ -30,9 +30,6 @@ function preForMb() {
     var table=$('#table'),
         grids=$('#grids'),
         grid=$('.grid');
-    $('#form').css('font-size','.2rem');
-    // table.css('font-size','.2rem');
-    // table.css('width','2rem');
 
     grids.css('width',gridsW-2*sps);
     grids.css('height',gridsW-2*sps);
@@ -41,7 +38,7 @@ function preForMb() {
 
     grid.css('width',gridW);
     grid.css('height',gridW);
-    grid.css('font-size','.2rem');
+    grid.css('font-size',0.5*gridW);
     grid.css('border-radius',0.1*gridW);
 }
 
