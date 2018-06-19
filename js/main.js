@@ -38,7 +38,7 @@ function preForMb() {
 
     grid.css('width',gridW);
     grid.css('height',gridW);
-    grid.css('font-size',0.1*gridW);
+    grid.css('font-size','10px');
     grid.css('border-radius',0.1*gridW);
 }
 
