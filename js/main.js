@@ -118,8 +118,8 @@ function update() {
             hasTouched[i][j]=false;
         }
     }
-    num.css('line-height',0.5*gridW+'px');
-    num.css('font-size',0.5*gridW+'px');
+    $('.num').css('line-height',gridW+'px');
+    $('.num').css('font-size',gridW+'px');
     // num.css('padding','auto -2px');
 }
 
