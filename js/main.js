@@ -119,7 +119,6 @@ function update() {
         }
     }
     $('.num').css('line-height',0.25*gridW+'px');
-    $('.num').css('line-height',0.2*gridW+'px');
     $('.num').css('font-size',0.2*gridW+'px');
     // num.css('padding','auto -2px');
 }
