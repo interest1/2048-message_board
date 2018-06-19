@@ -118,9 +118,9 @@ function update() {
             hasTouched[i][j]=false;
         }
     }
-    $('.num').css('line-height',0.18*gridW+'px');
-    $('.num').css('font-size',0.18*gridW+'px');
-    // num.css('padding','auto -2px');
+    $('.num').css('line-height',0.2*gridW+'px');
+    $('.num').css('font-size',0.2*gridW+'px');
+    num.css('padding','auto -2px');
 }
 
 $(document).keydown(function (e) {
