@@ -38,7 +38,6 @@ function preForMb() {
 
     grid.css('width',gridW);
     grid.css('height',gridW);
-    grid.css('font-size','10px');
     grid.css('border-radius',0.1*gridW);
 }
 
@@ -119,8 +118,8 @@ function update() {
             hasTouched[i][j]=false;
         }
     }
-    num.css('line-height',gridW/3+'px');
-    num.css('font-size',0.2*gridW+'px');
+    num.css('line-height',gridW/3);
+    num.css('font-size',0.18*gridW);
     num.css('padding','auto -2px');
 }
 
