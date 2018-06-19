@@ -31,8 +31,8 @@ function preForMb() {
         grids=$('#grids'),
         grid=$('.grid');
     $('#form').css('font-size','.2rem');
-    table.css('font-size','.2rem');
-    table.css('width','2rem');
+    // table.css('font-size','.2rem');
+    // table.css('width','2rem');
 
     grids.css('width',gridsW-2*sps);
     grids.css('height',gridsW-2*sps);
