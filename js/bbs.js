@@ -5,7 +5,7 @@ $(document).ready(function () {
 function mob() {
     var table=document.getElementById('table');
     if(docW<500){
-        table.style.width='300px';
+        table.style.width='100%';
         console.log('a');
     }
 
